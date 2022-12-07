@@ -34,6 +34,10 @@ function App() {
     setTaskList(temp);
   }
 
+  const onDeleteAll = () => {
+    setTaskList([])
+  }
+
   return (
     <>
       <div className="container">
@@ -55,7 +59,8 @@ function App() {
                 onDeleteTask={onDeleteTask} />
               ))
             }
-            <button className='btnDelete'>Borrar todo</button>
+            <button className='btnDelete'
+            onClick={onDeleteAll} >Borrar todo</button>
         </div>
       </div>
     </>

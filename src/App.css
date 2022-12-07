@@ -44,17 +44,6 @@ h1 {
 }
 
 
-.btnDelete {
-    background: #000;
-    color: #fff;
-    width: 120px;
-    height: 30px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    margin-top: 10px;
-    align-self: center;
-}
 
 .containerTasks {
     display: flex;
@@ -71,8 +60,22 @@ h1 {
     align-items: center;
     border: 1px solid #e9e9e9;
     padding: 20px 15px;
+    min-width: 220px;
 }
 
 .task span {
     color: #fff;
+}
+
+.btnDelete {
+    background: #000;
+    color: #fff;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    align-self: center;
 }
