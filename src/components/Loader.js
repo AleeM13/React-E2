@@ -7,6 +7,7 @@ export const Loader = () => {
     justify-content: space-around;
     align-items: center;
     width: 7%;
+    margin-top: 50px;
   `
 
   const colors = keyframes`
