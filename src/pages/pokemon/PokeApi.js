@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Loader } from '../../components/Loader';
 import { Navbar } from '../../components/Navbar';
-import { PokemonCard } from '../../components/PokemonCard';
+import Pokemon from '../../components/pokemon/card/Card';
 import { Search } from '../../components/Search';
 
 export const PokeApi = () => {
@@ -29,7 +29,7 @@ export const PokeApi = () => {
       )
       setData(data);
     } catch (error) {
-      setError(error);
+      setError('No se encontró ese pokemon');
     }
     setIsLoading(false);
   }
@@ -42,7 +42,7 @@ export const PokeApi = () => {
         <Search handleSubmit={ handleSubmit } />
         { isLoading && <Loader />}
         { error && <h2 style= { {color: 'red'} }> {error} </h2> }
-        {data && <PokemonCard {...data} />} 
+        {data && <Pokemon {...data} />} 
       </section>
     </>
   );

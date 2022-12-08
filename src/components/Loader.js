@@ -2,6 +2,13 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
 export const Loader = () => {
+  const ContainerLoaders = styled.div `
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 7%;
+  `
+
   const colors = keyframes`
     to {
     opacity: .1;
@@ -10,8 +17,8 @@ export const Loader = () => {
   `
 
  const LoaderSpan = styled.span `
-    width: 4px;
-    height: 4px;
+    width: 15px;
+    height: 15px;
     border-radius: 50px;
     background: #ff0090;
     animation: ${colors} .6s infinite alternate;
@@ -19,9 +26,11 @@ export const Loader = () => {
 
   return (
     <>
+      <ContainerLoaders>
         <LoaderSpan></LoaderSpan>
         <LoaderSpan></LoaderSpan>
         <LoaderSpan></LoaderSpan>
+      </ContainerLoaders>
     </>
   )
 }

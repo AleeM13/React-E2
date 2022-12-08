@@ -5,7 +5,10 @@ export const Search = ({ handleSubmit }) => {
 
   return (
     <>
-        <form className='search'>
+        <form onSubmit={(e) => {
+          handleSubmit(e, pokemon);
+          e.preventDefault();
+        }} className='search'>
           <input className='inputStyled' type="text" placeholder='Ingresa un nombre'
           onSubmit= { (e) => e.preventDefault() }
           onChange={ (e) => setPokemon(e.target.value) }
