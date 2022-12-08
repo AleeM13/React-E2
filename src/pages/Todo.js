@@ -35,10 +35,6 @@ function Todo() {
     setTaskList(temp);
   };
 
-  const onDeleteAll = () => {
-    setTaskList([]);
-  };
-
   return (
     <>
     <Navbar/>
